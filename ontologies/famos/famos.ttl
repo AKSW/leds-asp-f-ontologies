@@ -17,6 +17,12 @@
 # #################################################################
 # 
 # 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#belongs_to_building_segment
+
+:belongs_to_building_segment a owl:ObjectProperty ;
+	rdfs:domain :room ;
+	rdfs:range :building_segment .
+# 
 # https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#belongs_to_floor
 
 :belongs_to_floor a owl:ObjectProperty ;
@@ -81,6 +87,12 @@
 
 :door_width a owl:ObjectProperty .
 # 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#has_Slices
+
+:has_Slices a owl:ObjectProperty ;
+	rdfs:domain :vertical_room ;
+	rdfs:range :room .
+# 
 # https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#is_connected_to
 
 :is_connected_to a owl:ObjectProperty .
@@ -105,6 +117,12 @@
 :segments_building a owl:ObjectProperty ;
 	rdfs:domain :building_segment ;
 	rdfs:range :building .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#slice_of_vertical_room
+
+:slice_of_vertical_room a owl:ObjectProperty ;
+	rdfs:domain :room ;
+	rdfs:range :vertical_room .
 # 
 # 
 # 

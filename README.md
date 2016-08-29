@@ -12,7 +12,7 @@ There is also an interesting discussion on [stackoverflow](http://stackoverflow.
 
 ## Requirements for ontologies
 
-Our use case is located in **Open Data** and **Open Govermnent** and characterized by the following parameter:
+Our use case is located in **Open Data** and **Open Government** and characterized by the following parameter:
 * Broad spectrum of people using and participating
 * Education/qualification of the people differs: technicans, domain experts, ontologists, end-users. Groups are not distinct and may overlap.
 * Broad spectrum of domains, which need to be integrated. We want to create an ontological foundation for basic / mainstream use cases, which means, that each ontology is more like a set of modules which can be used differently in different use cases.

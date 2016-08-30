@@ -4,61 +4,65 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl> .
 
-<https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl> rdf:type owl:Ontology .
+<https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl> a owl:Ontology ;
+	owl:imports <https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#hasElevatorCabine
 
-#################################################################
-#    Object Properties
-#################################################################
+:hasElevatorCabine a owl:ObjectProperty ;
+	rdfs:range :ElevatorCabine ;
+	rdfs:label "has elevator cabine"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#hasDoorWidth
 
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#hasElevatorCabine
-:hasElevatorCabine rdf:type owl:ObjectProperty ;
-                   rdfs:range :ElevatorCabine ;
-                   rdfs:label "has elevator cabine"@en .
+:hasDoorWidth a owl:DatatypeProperty ;
+	rdfs:label "has door width"@en .
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#highestDistanceOfControlPanelButtonFromGroundInside
 
+:highestDistanceOfControlPanelButtonFromGroundInside a owl:DatatypeProperty ;
+	rdfs:label "highest distance of a control panel button from ground up (inside)"@en .
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#highestDistanceOfControlPanelButtonFromGroundOutside
 
-#################################################################
-#    Data properties
-#################################################################
+:highestDistanceOfControlPanelButtonFromGroundOutside a owl:DatatypeProperty ;
+	rdfs:label "highest distance of a control panel button from ground up (outside)"@en .
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#isAvailable
 
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#cabineRoomDepth
-:cabineRoomDepth rdf:type owl:DatatypeProperty ;
-                 rdfs:label "depth of the cabine room"@en .
+:isAvailable a owl:DatatypeProperty ;
+	rdfs:label "is available"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#ElevatorCabine
 
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#cabineRoomWidth
-:cabineRoomWidth rdf:type owl:DatatypeProperty ;
-                 rdfs:label "width of the cabine room"@en .
-
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#hasDoorWidth
-:hasDoorWidth rdf:type owl:DatatypeProperty ;
-              rdfs:label "has door width"@en .
-
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#highestDistanceOfControlPanelButtonFromGroundInside
-:highestDistanceOfControlPanelButtonFromGroundInside rdf:type owl:DatatypeProperty ;
-                                                     rdfs:label "highest distance of a control panel button from ground up (inside)"@en .
-
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#highestDistanceOfControlPanelButtonFromGroundOutside
-:highestDistanceOfControlPanelButtonFromGroundOutside rdf:type owl:DatatypeProperty ;
-                                                      rdfs:label "highest distance of a control panel button from ground up (outside)"@en .
-
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#isAvailable
-:isAvailable rdf:type owl:DatatypeProperty ;
-             rdfs:label "is available"@en .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  https://raw.githubusercontent.com/AKSW/leds-asp-f-ontologies/master/ontologies/elevator/ontology.ttl#ElevatorCabine
-:ElevatorCabine rdf:type owl:Class ;
-                rdfs:label "Elevator Cabine"@en .
-
-
-###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
+:ElevatorCabine a owl:Class ;
+	rdfs:label "Elevator Cabine"@en .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

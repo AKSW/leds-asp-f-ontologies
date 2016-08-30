@@ -4,166 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl> .
 
-<https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl> a owl:Ontology ;
-	rdfs:comment "Ontology with units and measurements as DataTypeProperties. It is inspired by http://www.w3.org/2007/ont/unit."@en .
-# 
-# 
-# #################################################################
-# #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# 
-
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Object Properties
-# #
-# #################################################################
-# 
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#area
-
-:area a owl:ObjectProperty .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#height
-
-:height a owl:ObjectProperty .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#length
-
-:length a owl:ObjectProperty .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#maximumLoad
-
-:maximumLoad a owl:ObjectProperty ;
-	rdfs:label "maximum load"@en .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#radius
-
-:radius a owl:ObjectProperty .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#width
-
-:width a owl:ObjectProperty .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Data properties
-# #
-# #################################################################
-# 
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#A
-
-:A a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number Ampêres in this current." ;
-	rdfs:label "A" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#C
-
-:C a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of Coulonbs in this electyric charge." ;
-	rdfs:label "C" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#J
-
-:J a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of joules in this energy." ;
-	rdfs:label "J" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#N
-
-:N a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of Newtons in this force." ;
-	rdfs:label "N" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#V
-
-:V a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of Volts in this electrical potential." ;
-	rdfs:label "V" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#W
-
-:W a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of Watts in this power." ;
-	rdfs:label "W" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#hz
-
-:hz a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of Hertz in this frequency." ;
-	rdfs:label "Hz" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#kg
-
-:kg a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of kilograms in this mass." ;
-	rdfs:label "kg" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#m
-
-:m a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of meters in this linear measurement." ;
-	rdfs:label "m" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#m2
-
-:m2 a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of square meters in this area." ;
-	rdfs:label "m2" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#mps
-
-:mps a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of meters per second in this speed." ;
-	rdfs:label "ms-1" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#mpsps
-
-:mpsps a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of meters per second per second in this acceleration." ;
-	rdfs:label "ms-2" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#s
-
-:s a owl:DatatypeProperty ;
-	rdfs:range xsd:double ;
-	rdfs:comment "The number of seconds in this time measurement." ;
-	rdfs:label "s" .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-
-<file:/C:/Users/koestnerFr/Spielwiese/Unit%20Ontology/unit.rdf> <http://creativecommons.org/ns#licence> <http://www.w3.org/2000/10/swap/LICENSE.n3> ;
-	rdfs:comment """Units of Measure.
+<https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl> rdf:type owl:Ontology ;
+                                                                                                           rdfs:comment "Ontology with units and measurements as DataTypeProperties. It is inspired by http://www.w3.org/2007/ont/unit."@en ,
+                                                                                                                        """Units of Measure.
     
     This ontology defines a set of properties which may be used
     for reprenting physical quantities.   Each is an RDF Property
@@ -180,5 +25,129 @@
     begin with lowercase.
     See also http://www-ksl.stanford.edu/knowledge-sharing/papers/engmath.html
     """ .
-# 
-# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#area
+:area rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#height
+:height rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#length
+:length rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#maximumLoad
+:maximumLoad rdf:type owl:ObjectProperty ;
+             rdfs:label "maximum load"@en .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#radius
+:radius rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#width
+:width rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#A
+:A rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number Ampêres in this current." ;
+   rdfs:label "A" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#C
+:C rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of Coulonbs in this electyric charge." ;
+   rdfs:label "C" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#J
+:J rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of joules in this energy." ;
+   rdfs:label "J" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#N
+:N rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of Newtons in this force." ;
+   rdfs:label "N" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#V
+:V rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of Volts in this electrical potential." ;
+   rdfs:label "V" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#W
+:W rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of Watts in this power." ;
+   rdfs:label "W" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#hz
+:hz rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:double ;
+    rdfs:comment "The number of Hertz in this frequency." ;
+    rdfs:label "Hz" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#kg
+:kg rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:double ;
+    rdfs:comment "The number of kilograms in this mass." ;
+    rdfs:label "kg" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#m
+:m rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of meters in this linear measurement." ;
+   rdfs:label "m" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#m2
+:m2 rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:double ;
+    rdfs:comment "The number of square meters in this area." ;
+    rdfs:label "m2" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#mps
+:mps rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:double ;
+     rdfs:comment "The number of meters per second in this speed." ;
+     rdfs:label "ms-1" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#mpsps
+:mpsps rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:double ;
+       rdfs:comment "The number of meters per second per second in this acceleration." ;
+       rdfs:label "ms-2" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#s
+:s rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of seconds in this time measurement." ;
+   rdfs:label "s" .
+
+
+###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

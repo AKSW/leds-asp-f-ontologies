@@ -1,12 +1,13 @@
-@prefix : <https://github.com/AKSW/leds-asp-f-ontologies/famosLE#> .
+@prefix : <https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://github.com/AKSW/leds-asp-f-ontologies/famosLE> a owl:Ontology ;
-	rdfs:comment "Ontology that describes the data from Famos LE but uses slightly different terms for the data."@en .
+<https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl> a owl:Ontology ;
+	rdfs:label "Famos LE Ontology"@en ;
+	rdfs:comment "This Ontology describes building data from Famos LE. It contains some difference to the exact datastucture of Famos. Floors dont belong to building segments but to buildings. building parts are buildings and LE buildings are building complexes. "@en .
 # 
 # 
 # #################################################################
@@ -16,35 +17,112 @@
 # #################################################################
 # 
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#belongs_to_floor
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#belongs_to_building_segment
+
+:belongs_to_building_segment a owl:ObjectProperty ;
+	rdfs:domain :room ;
+	rdfs:range :building_segment .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#belongs_to_floor
 
 :belongs_to_floor a owl:ObjectProperty ;
 	rdfs:domain :room ;
 	rdfs:range :floor .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#divide_segment
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#divides_horizontally
 
-:divide_segment a owl:ObjectProperty ;
+:divides_horizontally a owl:ObjectProperty ;
 	rdfs:domain :floor ;
 	rdfs:range :building_segment .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#is_connected_to
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorGlassCutoutArcheRise
 
-:is_connected_to a owl:ObjectProperty ;
-	rdfs:domain :door ;
+:doorGlassCutoutArcheRise a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorGlassCutoutGlassSurface
+
+:doorGlassCutoutGlassSurface a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorGlassCutoutHight
+
+:doorGlassCutoutHight a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorGlassCutoutWidth
+
+:doorGlassCutoutWidth a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorSkylightArcheRise
+
+:doorSkylightArcheRise a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorSkylightArea
+
+:doorSkylightArea a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorSkylightGlassSurface
+
+:doorSkylightGlassSurface a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorSkylightHight
+
+:doorSkylightHight a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#doorSkylightWidth
+
+:doorSkylightWidth a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door_arche_rise
+
+:door_arche_rise a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door_area
+
+:door_area a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door_hight
+
+:door_hight a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door_width
+
+:door_width a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#has_Slices
+
+:has_Slices a owl:ObjectProperty ;
+	rdfs:domain :vertical_room ;
 	rdfs:range :room .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#part_of_building_complex
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#is_connected_to
+
+:is_connected_to a owl:ObjectProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#part_of
+
+:part_of a owl:ObjectProperty , owl:TransitiveProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#part_of_building_complex
 
 :part_of_building_complex a owl:ObjectProperty ;
 	rdfs:domain :building ;
 	rdfs:range :building_complex .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#segments_building
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#room_area
+
+:room_area a owl:ObjectProperty ;
+	rdfs:domain :room .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#segments_building
 
 :segments_building a owl:ObjectProperty ;
 	rdfs:domain :building_segment ;
 	rdfs:range :building .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#slice_of_vertical_room
+
+:slice_of_vertical_room a owl:ObjectProperty ;
+	rdfs:domain :room ;
+	rdfs:range :vertical_room .
 # 
 # 
 # 
@@ -55,49 +133,59 @@
 # #################################################################
 # 
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building_complex_label
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#address
+
+:address a owl:DatatypeProperty ;
+	rdfs:domain :building_complex ;
+	rdfs:range xsd:string .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building_complex_label
 
 :building_complex_label a owl:DatatypeProperty ;
 	rdfs:domain :building_complex ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building_label
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building_label
 
 :building_label a owl:DatatypeProperty ;
 	rdfs:domain :building ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building_segment_label
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building_segment_label
 
 :building_segment_label a owl:DatatypeProperty ;
 	rdfs:domain :building_segment ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#door_code
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door_code
 
 :door_code a owl:DatatypeProperty ;
 	rdfs:domain :door ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#exterior_door
-
-:exterior_door a owl:DatatypeProperty ;
-	rdfs:domain :door ;
-	rdfs:range xsd:boolean .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#floor_label
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#floor_label
 
 :floor_label a owl:DatatypeProperty ;
 	rdfs:domain :floor ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#room_label
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#is_exterior_door
+
+:is_exterior_door a owl:DatatypeProperty ;
+	rdfs:domain :door ;
+	rdfs:range xsd:boolean .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#room_label
 
 :room_label a owl:DatatypeProperty ;
 	rdfs:domain :room ;
 	rdfs:range xsd:string .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#room_type
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#room_number
+
+:room_number a owl:DatatypeProperty .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#room_type
 
 :room_type a owl:DatatypeProperty ;
 	rdfs:domain :room ;
@@ -112,34 +200,43 @@
 # #################################################################
 # 
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#additional_classes
+
+:additional_classes a owl:Class .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building
 
 :building a owl:Class ;
 	rdfs:comment "building is a set of connected rooms."@en .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building_complex
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building_complex
 
 :building_complex a owl:Class ;
 	rdfs:comment "building complex consists of one or more buildings within a gapeless address field"@en .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#building_segment
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#building_segment
 
 :building_segment a owl:Class ;
 	rdfs:comment "A building segment is a group of rooms of a building."@en .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#door
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#door
 
 :door a owl:Class ;
 	rdfs:comment "A door is a passage between rooms and buildings."@en .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#floor
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#floor
 
 :floor a owl:Class ;
 	rdfs:comment "Floor is a surface layer with mostly no vertical transitions."@en .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/famosLE#room
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#room
 
 :room a owl:Class ;
-	rdfs:comment "A room is a physical room that is three dimensial area limited by walls, passages and barriers."@en .
+	rdfs:comment "A room is a physical room that is three dimensional area limited by walls, passages and barriers."@en .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/famos/ontology.ttl#vertical_room
+
+:vertical_room a owl:Class ;
+	rdfs:subClassOf :additional_classes .
 # 
 # Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

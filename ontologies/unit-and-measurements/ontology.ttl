@@ -73,6 +73,13 @@
    rdfs:label "C" .
 
 
+###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#cm
+:cm rdf:type owl:DatatypeProperty ;
+   rdfs:range xsd:double ;
+   rdfs:comment "The number of centimeters in this linear measurement." ;
+   rdfs:label "cm" .
+
+
 ###  https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/unit-and-measurements/ontology.ttl#J
 :J rdf:type owl:DatatypeProperty ;
    rdfs:range xsd:double ;

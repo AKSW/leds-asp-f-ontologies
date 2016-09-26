@@ -13,6 +13,8 @@ The following diagram illustrates the structure of classes and related propertie
 
 ## Parts of the elevator structure
 
+We based our ideas of the following overview, but current dataset does not justify to model elevators in such extend. Maybe later more detailed information are neccessary.
+
 | Part | Features / Properties | Source |
 |------|------------------------|--------|
 | Control panel | max./min. height above floor | DIN 81-20, 5.12.1 and <br>DIN 81-70, 5.4.2.2 |

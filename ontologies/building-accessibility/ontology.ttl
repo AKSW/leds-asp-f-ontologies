@@ -1,0 +1,65 @@
+@prefix : <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wa: <http://semweb.mmlab.be/ns/wa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#> .
+
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#> rdf:type owl:Ontology ;
+                                                                                                            rdfs:comment "Ontologie zur Modellierung des Grads der Barrierefreiheit von Gebäuden."@de ,
+                                                                                                                         "Ontology describing accessibility facts of buildings. It is based on https://github.com/AKSW/leds-asp-f-ontologies/blob/master/ontologies/building/ontology.ttl."@en .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#altEntranceForWheelchairUserExisting
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#altEntranceForWheelchairUserExisting> rdf:type owl:DatatypeProperty ;
+                                                                                                                                               rdfs:label "Alternativer Eingang für Rollstuhlfahrer vorhanden" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#localSupport
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#localSupport> rdf:type owl:DatatypeProperty ;
+                                                                                                                       rdfs:label "Hilfestellung vor Ort" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#locationAltEntranceForWheelchairUser
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#locationAltEntranceForWheelchairUser> rdf:type owl:DatatypeProperty ;
+                                                                                                                                               rdfs:label "Ort des alternativen Eingangs für Rollstuhlfahrer" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#markedWithPictogramAsDisabledToilet
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#markedWithPictogramAsDisabledToilet> rdf:type owl:DatatypeProperty ;
+                                                                                                                                              rdfs:label "mit Piktogramm als Behindertentoilette gezeichnet" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#numberOfSlotsDisabledParkingLotInFrontOfPlace
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#numberOfSlotsDisabledParkingLotInFrontOfPlace> rdf:type owl:DatatypeProperty ;
+                                                                                                                                                        rdfs:label "Anzahl Behindertenparkplätze vor Einrichtung" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#numberOfSlotsDisabledParkingLotOnSite
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#numberOfSlotsDisabledParkingLotOnSite> rdf:type owl:DatatypeProperty ;
+                                                                                                                                                rdfs:label "Anzahl der Behindertenparkplätze auf hauseigenem Parkplatz" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#suitableForWheelchairs
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#suitableForWheelchairs> rdf:type owl:DatatypeProperty ;
+                                                                                                                                 rdfs:label "Rollstuhlgerecht" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#supportForHearingImpairedAvailable
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#supportForHearingImpairedAvailable> rdf:type owl:DatatypeProperty ;
+                                                                                                                                             rdfs:label "Hilfestellungen für Menschen mit Hörbehinderung vorhanden" .
+
+
+###  https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#supportForVisualImpairedAvailable
+<https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building-accessibility/ontology.ttl#supportForVisualImpairedAvailable> rdf:type owl:DatatypeProperty ;
+                                                                                                                                            rdfs:label "Hilfestellungen für Menschen mit Sehbehinderung vorhanden" .
+
+
+###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

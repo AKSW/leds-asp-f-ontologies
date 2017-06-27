@@ -1,5 +1,5 @@
 @prefix : <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/1> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix wa: <http://semweb.mmlab.be/ns/wa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -39,26 +39,6 @@
 :entrance a owl:ObjectProperty ;
 	rdfs:label "Eingang" .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#hasBarrier
-
-:hasBarrier a owl:ObjectProperty ;
-	rdfs:range :Barrier .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#hasPassage
-
-:hasPassage a owl:ObjectProperty ;
-	rdfs:range :Passage .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#hasPhysicalRoom
-
-:hasPhysicalRoom a owl:ObjectProperty ;
-	rdfs:range :PhysicalRoom .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#hasWall
-
-:hasWall a owl:ObjectProperty ;
-	rdfs:range :Wall .
-# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#location
 
 :location a owl:ObjectProperty ;
@@ -90,17 +70,17 @@
 # 
 # http://purl.org/dc/elements/1.1/identifier
 
-<http://purl.org/dc/elements/1.1/identifier> a owl:DatatypeProperty ;
+dc:identifier a owl:DatatypeProperty ;
 	rdfs:label "ID" .
 # 
 # http://purl.org/dc/elements/1.1/subject
 
-<http://purl.org/dc/elements/1.1/subject> a owl:DatatypeProperty ;
+dc:subject a owl:DatatypeProperty ;
 	rdfs:label "Kategorie" .
 # 
 # http://purl.org/dc/elements/1.1/title
 
-<http://purl.org/dc/elements/1.1/title> a owl:DatatypeProperty ;
+dc:title a owl:DatatypeProperty ;
 	rdfs:label "Titel" , "Title"@en .
 # 
 # http://schema.org/addressLocality
@@ -157,11 +137,6 @@ wa:toiletDoorWidth a owl:DatatypeProperty ;
 
 skos:note a owl:DatatypeProperty ;
 	rdfs:label "Hinweis" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#altEntranceForWheelchairUserExisting
-
-:altEntranceForWheelchairUserExisting a owl:DatatypeProperty ;
-	rdfs:label "Alternativer Eingang für Rollstuhlfahrer vorhanden" .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#areaInFrontOfWCDepthCm
 
@@ -258,16 +233,6 @@ skos:note a owl:DatatypeProperty ;
 :heightOfAStepTillEntrance a owl:DatatypeProperty ;
 	rdfs:label "Höhe einer Stufe bis Eingang in cm" .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#localSupport
-
-:localSupport a owl:DatatypeProperty ;
-	rdfs:label "Hilfestellung vor Ort" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#locationAltEntranceForWheelchairUser
-
-:locationAltEntranceForWheelchairUser a owl:DatatypeProperty ;
-	rdfs:label "Ort des alternativen Eingangs für Rollstuhlfahrer" .
-# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#locationOfElevatorMaintainer
 
 :locationOfElevatorMaintainer a owl:DatatypeProperty ;
@@ -283,11 +248,6 @@ skos:note a owl:DatatypeProperty ;
 :locationParkingLotOnSite a owl:DatatypeProperty ;
 	rdfs:label "Ort des hauseigenen Parkplatzes" .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#markedWithPictogramAsDisabledToilet
-
-:markedWithPictogramAsDisabledToilet a owl:DatatypeProperty ;
-	rdfs:label "mit Piktogramm als Behindertentoilette gezeichnet" .
-# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#narrowestDoorWidthTillPlaceCm
 
 :narrowestDoorWidthTillPlaceCm a owl:DatatypeProperty ;
@@ -297,16 +257,6 @@ skos:note a owl:DatatypeProperty ;
 
 :notesAboutLocation a owl:DatatypeProperty ;
 	rdfs:label "Lagebeschreibung in Einrichtung" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#numberOfSlotsDisabledParkingLotInFrontOfPlace
-
-:numberOfSlotsDisabledParkingLotInFrontOfPlace a owl:DatatypeProperty ;
-	rdfs:label "Anzahl Behindertenparkplätze vor Einrichtung" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#numberOfSlotsDisabledParkingLotOnSite
-
-:numberOfSlotsDisabledParkingLotOnSite a owl:DatatypeProperty ;
-	rdfs:label "Anzahl der Behindertenparkplätze auf hauseigenem Parkplatz" .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#numberOfStepsTillEntrance
 
@@ -403,16 +353,6 @@ skos:note a owl:DatatypeProperty ;
 :suitableForWheelchairs a owl:DatatypeProperty ;
 	rdfs:label "Rollstuhlgerecht" .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#supportForHearingImpairedAvailable
-
-:supportForHearingImpairedAvailable a owl:DatatypeProperty ;
-	rdfs:label "Hilfestellungen für Menschen mit Hörbehinderung vorhanden" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#supportForVisualImpairedAvailable
-
-:supportForVisualImpairedAvailable a owl:DatatypeProperty ;
-	rdfs:label "Hilfestellungen für Menschen mit Sehbehinderung vorhanden" .
-# 
 # 
 # 
 # #################################################################
@@ -424,7 +364,8 @@ skos:note a owl:DatatypeProperty ;
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#AutomaticDoor
 
-:AutomaticDoor a owl:Class .
+:AutomaticDoor a owl:Class ;
+	rdfs:label "Automatische Tür"@de .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#Barrier
 
@@ -438,30 +379,20 @@ skos:note a owl:DatatypeProperty ;
 	rdfs:comment "A building is a set which contains at least one physical room."@en , "Ein Gebäude ist eine Menge, welche mindestens einen physischen Raum enthält."@de ;
 	rdfs:label "Building"@en , "Gebäude"@de .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#BuildingPassage
-
-:BuildingPassage a owl:Class ;
-	rdfs:subClassOf :Passage ;
-	rdfs:comment "A building passage connects two buildings or a building with the outerworld."@de , "Ein Gebäudedurchgang verbindet ein Gebäude mit einem anderen oder ein Gebäude mit der Außenwelt."@de ;
-	rdfs:label "Building Passage"@en , "Gebäudedurchgang"@de .
-# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#CirclingLeafDoor
 
-:CirclingLeafDoor a owl:Class .
+:CirclingLeafDoor a owl:Class ;
+	rdfs:label "Drehtür"@de .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#LeverArm
 
-:LeverArm a owl:Class .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#Passage
-
-:Passage a owl:Class ;
-	rdfs:comment "A passage is a structure that connects physical room respectively buildings."@en , "Ein Durchgang ist eine Struktur, welche physische Räume bzw. Gebäude verbindet."@de ;
-	rdfs:label "Durchgang"@de , "Passage"@en .
+:LeverArm a owl:Class ;
+	rdfs:label "Hebelarm (Amatur am Waschbecken)"@de .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#Phototube
 
-:Phototube a owl:Class .
+:Phototube a owl:Class ;
+	rdfs:label "Fotozelle (Amatur am Waschbecken)"@de .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#PhysicalRoom
 
@@ -471,31 +402,28 @@ skos:note a owl:DatatypeProperty ;
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#RevolvingDoor
 
-:RevolvingDoor a owl:Class .
+:RevolvingDoor a owl:Class ;
+	rdfs:label "Drehtür"@de , "Revolving Door"@en .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#SemiautomaticDoor
 
-:SemiautomaticDoor a owl:Class .
+:SemiautomaticDoor a owl:Class ;
+	rdfs:label "Semi-automatic Door"@en , "Semi-automatische Tür"@de .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#SlideDoor
 
-:SlideDoor a owl:Class .
+:SlideDoor a owl:Class ;
+	rdfs:label "Schiebetür"@de , "Slide Door"@en .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#SwingDoor
 
-:SwingDoor a owl:Class .
+:SwingDoor a owl:Class ;
+	rdfs:label "Pendeltür"@de , "Schwing Door"@en .
 # 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#Wall
 
 :Wall a owl:Class ;
 	rdfs:comment "A wall is a structure, which is going out from the ground and is mostly impermeable."@en , "Eine Wand eine vom Boden ausgehende größtenteils undurchlässige Struktur."@de ;
 	rdfs:label "Wall"@en , "Wand"@de .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#WallPassage
-
-:WallPassage a owl:Class ;
-	rdfs:subClassOf :Passage ;
-	rdfs:comment "A wall passage is located inside a wall and connects two physical rooms or a physical room with the outerworld."@en , "Ein Wanddurchgang befindet sich in einer Wand und verbindet entweder zwei physische Räume oder einen physischen Raum mit der Außenwelt."@de ;
-	rdfs:label "Wall Passage"@en , "Wanddurchgang"@de .
 # 
 # Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi

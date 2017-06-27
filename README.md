@@ -24,7 +24,7 @@ Therefore we have the following requirements for the ontologies we create or use
 
 ## Ontologies
 
-We are working on the following ontologies. Each one is considered a so called domain ontology and describes a certain area of interest. Further ontology types are core ontologies (or vocabularies) such as Dublin Core and task ontologies, which contain additional facts and rules, to modify a certain domain on behalf of an application.
+We are working on the following ontologies. Each one is considered a so called domain ontology and describes a certain area of interest. Further ontology types are core ontologies (or vocabularies) such as Dublin Core.
 
 ### Building ontology
 
@@ -32,11 +32,11 @@ This ontology describes buildings, usually structures which contain at least two
 
 [Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/building)
 
-### Elevator ontology
+### Building Accessibility ontology
 
-This ontology describes elevators inside or outside a building.
+With this ontology one can model accessibility features of buildings.
 
-[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/elevator)
+[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/building-accessibility)
 
 ### FAMOS ontology
 
@@ -53,8 +53,4 @@ This ontology describes buildings based on the [FAMOS](http://www.kesslersolutio
 
 ## License
 
-We didn't decide the license yet, so if you consider using these ontologies, ask us and we find a solution.
-
-Contact details:
-* [FKoestner](https://github.com/fkoestner)
-* [Konrad Abicht](http://aksw.org/KonradAbicht.html)
+Our ontologies are provided on the terms of the [Creative Commons BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) license.

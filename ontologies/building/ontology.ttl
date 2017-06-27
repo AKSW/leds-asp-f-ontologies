@@ -1,12 +1,14 @@
 @prefix : <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix wa: <http://semweb.mmlab.be/ns/wa#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/> .
 
 <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> a owl:Ontology ;
 	rdfs:comment "Ontology for structual modelling of buildings."@en , "Ontology zur Modellierung von Gebäuden."@de .
@@ -85,17 +87,17 @@ dc:title a owl:DatatypeProperty ;
 # 
 # http://schema.org/addressLocality
 
-<http://schema.org/addressLocality> a owl:DatatypeProperty ;
+schema:addressLocality a owl:DatatypeProperty ;
 	rdfs:label "City"@en , "Stadt"@de .
 # 
 # http://schema.org/postalCode
 
-<http://schema.org/postalCode> a owl:DatatypeProperty ;
+schema:postalCode a owl:DatatypeProperty ;
 	rdfs:label "Postal code"@en , "Postleitzahl"@de .
 # 
 # http://schema.org/streetAddress
 
-<http://schema.org/streetAddress> a owl:DatatypeProperty ;
+schema:streetAddress a owl:DatatypeProperty ;
 	rdfs:label "Straße (Adressbestandteil)"@de , "Street part of an address"@en .
 # 
 # http://semweb.mmlab.be/ns/wa#elevatorDoorWidth
@@ -125,12 +127,12 @@ wa:toiletDoorWidth a owl:DatatypeProperty ;
 # 
 # http://www.w3.org/2003/01/geo/lat
 
-<http://www.w3.org/2003/01/geo/lat> a owl:DatatypeProperty ;
+geo:lat a owl:DatatypeProperty ;
 	rdfs:label "Latitude (WGS 84)" .
 # 
 # http://www.w3.org/2003/01/geo/long
 
-<http://www.w3.org/2003/01/geo/long> a owl:DatatypeProperty ;
+geo:long a owl:DatatypeProperty ;
 	rdfs:label "Longitude (WGS 84)" .
 # 
 # http://www.w3.org/2004/02/skos/core#note

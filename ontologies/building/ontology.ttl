@@ -1,6 +1,7 @@
+@prefix : <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix wa: <http://semweb.mmlab.be/ns/wa#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,8 +10,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schema: <http://schema.org/> .
-@prefix : <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
-@base <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> .
 
 <https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#> a owl:Ontology ;
 	rdfs:comment "Ontology for structual modelling of buildings."@en , "Ontology zur Modellierung von Gebäuden."@de ;
@@ -238,6 +237,11 @@ skos:note a owl:DatatypeProperty ;
 :heightOfAStepTillEntrance a owl:DatatypeProperty ;
 	rdfs:label "Höhe einer Stufe bis Eingang in cm" .
 # 
+# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#leftSupportHandleIsFoldable
+
+:leftSupportHandleIsFoldable a owl:DatatypeProperty ;
+	rdfs:label "Linker Stützgriff neben WC klappbar"@de .
+# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#locationOfElevatorMaintainer
 
 :locationOfElevatorMaintainer a owl:DatatypeProperty ;
@@ -318,6 +322,11 @@ skos:note a owl:DatatypeProperty ;
 :rampWidthCm a owl:DatatypeProperty ;
 	rdfs:label "Breite der Rampe in cm" .
 # 
+# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#rightSupportHandleIsFoldable
+
+:rightSupportHandleIsFoldable a owl:DatatypeProperty ;
+	rdfs:label "Rechter Stützgriff neben WC klappbar"@de .
+# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#stepsHeightTillToiletInPlace
 
 :stepsHeightTillToiletInPlace a owl:DatatypeProperty ;
@@ -352,7 +361,11 @@ skos:note a owl:DatatypeProperty ;
 
 :stepsTillToiletInPlaceExisting a owl:DatatypeProperty ;
 	rdfs:label "Stufen bis Toilette in Einrichtung vorhanden" .
+# 
+# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#supportHandleAvailable
 
+:supportHandleAvailable a owl:DatatypeProperty ;
+	rdfs:label "Stützgriff neben WC vorhanden"@de .
 # 
 # 
 # 

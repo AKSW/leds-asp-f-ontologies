@@ -48,11 +48,6 @@
 :location a owl:ObjectProperty ;
 	rdfs:label "Lage" .
 # 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#parkingLot
-
-:parkingLot a owl:ObjectProperty ;
-	rdfs:label "Parkplatz" .
-# 
 # https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#toilet
 
 :toilet a owl:ObjectProperty ;

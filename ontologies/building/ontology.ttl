@@ -351,11 +351,7 @@ skos:note a owl:DatatypeProperty ;
 
 :stepsTillToiletInPlaceExisting a owl:DatatypeProperty ;
 	rdfs:label "Stufen bis Toilette in Einrichtung vorhanden" .
-# 
-# https://github.com/AKSW/leds-asp-f-ontologies/raw/master/ontologies/building/ontology.ttl#suitableForWheelchairs
 
-:suitableForWheelchairs a owl:DatatypeProperty ;
-	rdfs:label "Rollstuhlgerecht" .
 # 
 # 
 # 

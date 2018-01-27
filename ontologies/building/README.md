@@ -2,7 +2,7 @@
 
 This ontology describes fact about a building. In following figure illustrates this ontology. It depends on known vocabularies/ontologies like dc, dcterms, skos, geo, [wa](http://semweb.mmlab.be/ns/wa#) and schema.org. Upon the building ontology, more detailed ontologies can be built, like the building [accessibility ontology](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/building-accessibility). 
 
-Furthermore the building ontology helps formulate constraints ([SHACL rules](https://www.w3.org/TR/shacl/)). There are SHACL rules available, which describe accessibility aspects of a building, for instance, if [entrance is partyl/fully accessible by wheelchair users](https://github.com/schreckl/rules/blob/master/rules/accessible-building/).
+Furthermore the building ontology helps formulate constraints ([SHACL rules](https://www.w3.org/TR/shacl/)). There are SHACL rules available, which describe accessibility aspects of a building, for instance, if [entrance is partyl/fully accessible by wheelchair users](https://github.com/AKSW/shacl-shapes/tree/master/shape-groups/accessible-building).
 
 ![](illustration.png)
 

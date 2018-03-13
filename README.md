@@ -6,21 +6,21 @@ This repository is part of the work of the [ASP-F](http://www.leds-projekt.de/de
 
 We are working on the following ontologies. Each one is considered a so called domain ontology and describes a certain area of interest. Further ontology types are core ontologies (or vocabularies) such as Dublin Core.
 
-### Building ontology
+### Place ontology
 
-This ontology describes buildings, usually structures which contain at least two rooms and a roof. We wanted to keep it simple, but the main focus lies on architectural facts.
+This ontology describes places, usually buildings which contain at least two rooms and a roof. We wanted to keep it simple, but the main focus lies on architectural facts.
 
-[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/building)
+[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/place)
 
-### Building Accessibility ontology
+### Place Accessibility ontology
 
-With this ontology one can model accessibility features of buildings.
+With this ontology one can model accessibility features of places.
 
-[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/building-accessibility)
+[Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/place-accessibility)
 
 ### FAMOS ontology
 
-This ontology describes buildings based on the [FAMOS](http://www.kesslersolutions.de/cafm-loesung/cafm-software-famos.html) software. It references the building ontology to allow later interconnections.
+This ontology describes places based on the [FAMOS](http://www.kesslersolutions.de/cafm-loesung/cafm-software-famos.html) software. It references the place ontology to allow later interconnections.
 
 [Go to overview](https://github.com/AKSW/leds-asp-f-ontologies/tree/master/ontologies/famos)
 
